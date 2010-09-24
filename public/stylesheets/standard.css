@@ -1,0 +1,80 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+  font-size: 14pt;
+  padding:0;
+  margin:0
+}
+
+#link_cloud {  
+  width: 99%;
+  position:absolute;
+}
+
+#helpers {
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border:0;
+  padding:0;
+  margin:0;
+  background-color: #ddd;
+  line-height: 0.5em;
+}
+
+.link {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px;
+  float:left;
+}
+
+.link:hover {
+  background-color: #ccc;
+}
+
+.link_editor {
+  font-size: 0.5em;
+  text-decoration:none;
+	font-weight:bold;
+}
+
+/* link size classes */
+
+.smaller {
+  font-size: 0.75em;
+  color: #868282;
+}
+
+.small {
+  font-size: 1.0em;
+  color: #3C363C;
+}
+
+.medium {
+  font-size: 2em;
+  color: #EB413F;
+}
+
+.big {
+  font-size: 3em;
+  color: #FF3D77;
+}
+
+.bigger {
+  font-size: 4.0em;
+  color: #FF65AB;
+}
+
+.huge {
+  font-size: 5.0em;
+  color: #DD5858;
+}
+
+.gigantic {
+  font-size: 6.0em;
+  color: #B14E4E;
+}

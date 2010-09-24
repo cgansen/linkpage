@@ -1,0 +1,9 @@
+<div id="link_<%=link.id%>" style="float:left;">
+  <%= link_to(link.text, click_url(:id => link, :text => link.text.gsub(/[^\w]+/,'-')), {:class => "link #{sizes[(link.click_count - @min) / @divisor]}", :title => link_title_text(link) }) %>
+<span class="link_editor" id="link_editor_<%=link.id%>" style="display:none;"> 
+  <%= link_to_remote('remove link', 
+      	:url => {:action => 'remove_link', :id => link}, 
+      	:update => :none,
+		 		:confirm => "#{link.text}\n\nRemove this link?",
+      	:before => "Effect.Fade($('link_#{link.id}'), {duration: 0.5} );") %>
+</span></div>

@@ -1,0 +1,10 @@
+<div id="link_cloud"><%= render :partial => 'link', :collection => @links %></div>
+
+<div id="helpers">
+  <div style="padding: 0 5px;">
+	  <p style="float:right"><%= link_to_function 'show link modifiers', 
+	    "objs = document.getElementsByClassName('link_editor'); for(i = 0; i < objs.length; i++){Element.toggle(objs[i].id);}"%>
+	  </p>
+  <%= render :partial => 'add_link' %>
+</div>
+</div>
