@@ -1,5 +1,6 @@
 set :application, "linkpage"
-set :repository,  "svn://10.0.1.3/projects/linkpage"
+set :repository,  "git@github.com:cgansen/linkpage.git"
+set :scm, :git
 
 set :user, 'cgansen'
 set :use_sudo, false
@@ -16,6 +17,12 @@ role :web, "thir.d-rail.org"
 role :db,  "thir.d-rail.org", :primary => true
 
 namespace :deploy do
+  after 'deploy:update_code', 'deploy:copy_db_config'
+  
+  task :copy_db_config do
+    run "ln -s #{shared_path}/database.yml #{release_path}/config/database.yml"
+  end
+  
   task :start, :roles => :app do
     run "touch #{current_release}/tmp/restart.txt"
   end
