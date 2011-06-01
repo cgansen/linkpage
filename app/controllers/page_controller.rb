@@ -7,7 +7,7 @@ class PageController < ApplicationController
   end
   
   def home
-    @links = Link.find(:all)
+    @links = Link.find(:all, :order => :created_at)
     return if not @links.any?
     
     @max, @min, @divisor = get_link_cloud_data(@links)
